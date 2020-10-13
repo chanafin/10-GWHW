@@ -7,4 +7,10 @@ Emoji Plotting -  After importing the new dependencies, the first step is to cre
 Hawaii Weather - This is a more involved project that will test abilities to use SQLalchemy Declarations and Reflections and will incorporate a final step: Flask Endpoints.
 
 
-The first section is located in the Jupyter Notebook, hawaii_climates. After import dependencies, 
+The first section is located in the Jupyter Notebook, hawaii_climates. After importing dependencies, the engine is created to the DB and is reflected. The user can now view all the classes (tables) within the DB. Now a session can be created to the engine which represents the link from Python to the SQL DB.
+
+Now, the analysis begins. The first object is to plot the last 12 months of precipitation data. It starts with SQL query to the 'Measurement' class that filters any date outside the desired time frame. The queried data is then put into a DataFrame, sorted and plotted. 
+
+The next objective is to plot temperature observation data for the most active station in the measurement class. The first step is to determine how many total stations there are. This is accomplished through the func.count for the station class. Then, through a query, we group and sort the count of measurements by station. The most active station is then captured and the last tweleve months of temparature measurements will be plotted.
+
+The next goal is to create a function that calculates the minimum, maximum and average temperatures for a window of dates the user is able to input. After creating and testing the function. We apply the function to our vacation's time which is then plotted.
