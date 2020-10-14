@@ -13,4 +13,4 @@ Now, the analysis begins. The first object is to plot the last 12 months of prec
 
 The next objective is to plot temperature observation data for the most active station in the measurement class. The first step is to determine how many total stations there are. This is accomplished through the func.count for the station class. Then, through a query, we group and sort the count of measurements by station. The most active station is then captured and the last tweleve months of temparature measurements will be plotted.
 
-The next goal is to create a function that calculates the minimum, maximum and average temperatures for a window of dates the user is able to input. After creating and testing the function. We apply the function to our vacation's time which is then plotted.
+The next goal is to apply functions using SQLAlchemy. The first function calculates the minimum, maximum and average temperatures for a window of dates the user is able to input. After creating and testing the function. We apply the function to our vacation's time which is then plotted.
