@@ -53,10 +53,9 @@ def precipitation():
     prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
 
     # Query for the date and precipitation for the last year
-    precipitation = session.query(Measurement.date, Measurement.prcp).\
-        filter(Measurement.date >= prev_year).all()
+    precipitation = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= prev_year).all()
 
-    # Dict with date as the key and prcp as the value
+    # Dictionary with date as the key and prcp as the value
     precip = {date: prcp for date, prcp in precipitation}
     return jsonify(precip)
 
